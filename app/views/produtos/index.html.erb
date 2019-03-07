@@ -1,0 +1,47 @@
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>NOME</th>
+            <th>DESCRIÇÃO</th>
+            <th>PREÇO</th>
+            <th>QUANTIDADE</th>
+            <th>REMOVER</th>
+        </tr>
+    </thead>
+    <tbody>           
+        <% @produtos.each do |produto|%>
+        <tr>
+            <td><%=produto.nome%></td>
+            <td><%=produto.descricao%></td>
+            <td class="text"style="text-align: right"><%=produto.preco%></td>
+            <td class="text"style="text-align: center"><%=produto.quantidade%></td>
+            <td style="text-align: center"><%= button_to "X", produto, method: :delete %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+<br>
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Produtos com desconto</h4>
+</div>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>NOME</th>
+            <th>DESCRIÇÃO</th>
+            <th>PREÇO</th>
+            <th>QUANTIDADE</th>
+        </tr>
+    </thead>
+    <tbody>           
+        <% @produtos_baratos.each do |produto|%>
+        <tr>
+            <td><%=produto.nome%></td>
+            <td><%=produto.descricao%></td>
+            <td class="text"style="text-align: right"><%=produto.preco%></td>
+            <td class="text"style="text-align: center"><%=produto.quantidade%></td>            
+        </tr>
+        <% end %>
+    </tbody>
+</table>

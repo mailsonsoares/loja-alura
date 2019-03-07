@@ -1,0 +1,6 @@
+{
+    "html.autoClosingTags": true,
+    "editor.fontLigatures": true,
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.intellisense": "rubyLocate"
+}
